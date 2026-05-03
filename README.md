@@ -1,3 +1,1 @@
-
-
-Trabajo Práctico N2 - Bazan, Fabricio Bazan
+TP Diseño Responsivo - Condori Ricardo
