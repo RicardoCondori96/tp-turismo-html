@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/style/style-index.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <title>Inicio - Agencia de Turismo</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><i class="bi bi-globe-americas"></i> MundoTurismo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="megaMenu" role="button" data-bs-toggle="dropdown">
+              Explorar
+            </a>
+            <ul class="dropdown-menu mega-menu p-3">
+              <li><a class="dropdown-item" href="destinos.html">Destinos</a></li>
+              <li><a class="dropdown-item" href="agencias.html">Agencias</a></li>
+              <li><a class="dropdown-item" href="precios.html">Precios</a></li>
+              <li><a class="dropdown-item" href="blog.html">Blog de Viajes</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="contacto.html">Contacto</a></li>
+            </ul>
+          </li>
+        </ul>
+        <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#phishingModal">
+          <i class="bi bi-shield-lock"></i> Simulación de phishing
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="hero-video">
+    <video autoplay muted loop>
+      <source src="assets/video/paisaje.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay d-flex align-items-center justify-content-center">
+      <div class="text-white text-center">
+        <h1 class="display-3 fw-bold">Descubre el mundo</h1>
+        <p class="lead">Experiencias inolvidables te esperan en cada destino</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Destinos Populares</h2>
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <div class="card text-center h-100 shadow-sm destination-card">
+          <img src="assets/img/boxing.jpg" class="card-img-top" alt="Playa del Carmen">
+          <div class="card-body">
+            <h5 class="card-title">Playa del Carmen</h5>
+            <p class="card-text">Sol, arena blanca y relax total.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card text-center h-100 shadow-sm destination-card">
+          <img src="assets/img/yoga-group.jpg" class="card-img-top" alt="Machu Picchu">
+          <div class="card-body">
+            <h5 class="card-title">Machu Picchu</h5>
+            <p class="card-text">Aventura, cultura y paisajes milenarios.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card text-center h-100 shadow-sm destination-card">
+          <img src="assets/img/scott-webb-U5kQvbQWoG0-unsplash.jpg" class="card-img-top" alt="París">
+          <div class="card-body">
+            <h5 class="card-title">París</h5>
+            <p class="card-text">La escapada romántica perfecta.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container text-center my-5 bg-light p-4 rounded">
+    <h2>Viajeros Felices</h2>
+    <h1 id="counter" class="text-primary display-4 fw-bold">0</h1>
+  </div>
+
+  <div class="container my-5">
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active text-center">
+          <blockquote class="fs-4 fst-italic">"¡El viaje superó todas mis expectativas! Excelente organización."</blockquote>
+          <footer class="fw-bold">- Juan P.</footer>
+        </div>
+        <div class="carousel-item text-center">
+          <blockquote class="fs-4 fst-italic">"Los mejores precios y atención. Repetiremos el año que viene."</blockquote>
+          <footer class="fw-bold">- Laura G.</footer>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-white p-5 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <h4>Suscríbete a nuestras ofertas</h4>
+          <form id="contactForm">
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo electrónico</label>
+              <input type="email" class="form-control" id="email" placeholder="tu@email.com" required>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Suscribirse <span id="spinner" class="spinner-border spinner-border-sm d-none"></span>
+            </button>
+          </form>
+          
+          <div class="mt-4">
+            <h5>Síguenos</h5>
+            <div class="social-sprite-container">
+              <a href="#" class="sprite-icon icon-facebook" aria-label="Facebook"></a>
+              <a href="#" class="sprite-icon icon-twitter" aria-label="Twitter"></a>
+              <a href="#" class="sprite-icon icon-instagram" aria-label="Instagram"></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3641.8767931351187!2d-65.29528998497672!3d-24.184347789314052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f44bb5f257d%3A0x8e8ebcb15c0e1834!2sUniversidad%20Nacional%20de%20Jujuy!5e0!3m2!1ses!2sar!4v1683935293844!5m2!1ses!2sar" width="100%" height="250" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="phishingModal" tabindex="-1" aria-labelledby="phishingModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-danger text-white">
+          <h5 class="modal-title" id="phishingModalLabel"><i class="bi bi-exclamation-triangle-fill"></i> Alerta de Seguridad</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="fw-bold">Nunca compartas tus datos bancarios.</p>
+          <p>En MundoTurismo jamás te pediremos tus contraseñas o números de tarjeta por correo electrónico o redes sociales.</p>
+          <hr>
+          <h6>Señales de fraude:</h6>
+          <ul>
+            <li>Correos con sentido de urgencia ("Tu vuelo será cancelado si no pagas ya").</li>
+            <li>Remitentes con correos extraños (ej. mundoturismo@gmail-soporte.com).</li>
+            <li>Enlaces a sitios web que no tienen el candado de seguridad (HTTPS).</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">He comprendido</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/jquery/jquery-3.7.1.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script src="assets/js/menu-hover.js"></script> 
+  <script src="assets/js/contador-miembors.js"></script>
+  <script src="assets/js/spinner-formulario.js"></script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/style/style-clases.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <title>Agencias - MundoTurismo</title>
+  <style>
+    /* Estilos para el efecto Flip Card (Requisito del TP) */
+    .flip-card {
+      perspective: 1000px;
+      height: 350px;
+      margin-bottom: 20px;
+    }
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+    .flip-card.is-flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .flip-card-front {
+      background-color: #ffffff;
+    }
+    .flip-card-back {
+      background-color: #f8f9fa;
+      transform: rotateY(180deg);
+      text-align: center;
+    }
+    
+    /* Estilos para las estrellas de Rating */
+    .star-rating i {
+      font-size: 1.8rem;
+      color: #ccc;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+    .star-rating i.active {
+      color: #ffc107; /* Color amarillo/dorado */
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><i class="bi bi-globe-americas"></i> MundoTurismo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="megaMenu" role="button" data-bs-toggle="dropdown">
+              Explorar
+            </a>
+            <ul class="dropdown-menu mega-menu p-3">
+              <li><a class="dropdown-item" href="destinos.html">Destinos</a></li>
+              <li><a class="dropdown-item" href="agencias.html">Agencias</a></li>
+              <li><a class="dropdown-item" href="precios.html">Precios</a></li>
+              <li><a class="dropdown-item" href="blog.html">Blog de Viajes</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="contacto.html">Contacto</a></li>
+            </ul>
+          </li>
+        </ul>
+        <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#phishingModal">
+          <i class="bi bi-shield-lock"></i> Simulación de phishing
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container my-5">
+    <h2 class="text-center mb-5">Nuestras Agencias Asociadas</h2>
+    <div class="row">
+      
+      <div class="col-md-4">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <i class="bi bi-airplane-engines text-primary" style="font-size: 4rem;"></i>
+              <h4 class="mt-3">Vuela Lejos Viajes</h4>
+              <p class="text-muted text-center">Especialistas en vuelos internacionales y hoteles 5 estrellas.</p>
+              <button class="btn btn-primary btn-sm flip-btn mt-2">Ver Detalles</button>
+            </div>
+            <div class="flip-card-back">
+              <h5>Valoración de Usuarios</h5>
+              <p class="small text-muted mb-2">Califica a esta agencia:</p>
+              <div class="star-rating mb-3">
+                <i class="bi bi-star" data-rating="1"></i>
+                <i class="bi bi-star" data-rating="2"></i>
+                <i class="bi bi-star" data-rating="3"></i>
+                <i class="bi bi-star" data-rating="4"></i>
+                <i class="bi bi-star" data-rating="5"></i>
+              </div>
+              <p class="small">Ubicación: Centro Histórico<br>Atención: 24/7</p>
+              <button class="btn btn-secondary btn-sm flip-btn">Volver</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <i class="bi bi-compass text-success" style="font-size: 4rem;"></i>
+              <h4 class="mt-3">Rutas Eco-Tur</h4>
+              <p class="text-muted text-center">Enfocados en turismo de aventura, naturaleza y sustentabilidad.</p>
+              <button class="btn btn-primary btn-sm flip-btn mt-2">Ver Detalles</button>
+            </div>
+            <div class="flip-card-back">
+              <h5>Valoración de Usuarios</h5>
+              <p class="small text-muted mb-2">Califica a esta agencia:</p>
+              <div class="star-rating mb-3">
+                <i class="bi bi-star" data-rating="1"></i>
+                <i class="bi bi-star" data-rating="2"></i>
+                <i class="bi bi-star" data-rating="3"></i>
+                <i class="bi bi-star" data-rating="4"></i>
+                <i class="bi bi-star" data-rating="5"></i>
+              </div>
+              <p class="small">Ubicación: Zona Norte<br>Guías bilingües certificados</p>
+              <button class="btn btn-secondary btn-sm flip-btn">Volver</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <i class="bi bi-building text-info" style="font-size: 4rem;"></i>
+              <h4 class="mt-3">Ciudad Express</h4>
+              <p class="text-muted text-center">Tours urbanos, gastronomía y escapadas de fin de semana.</p>
+              <button class="btn btn-primary btn-sm flip-btn mt-2">Ver Detalles</button>
+            </div>
+            <div class="flip-card-back">
+              <h5>Valoración de Usuarios</h5>
+              <p class="small text-muted mb-2">Califica a esta agencia:</p>
+              <div class="star-rating mb-3">
+                <i class="bi bi-star" data-rating="1"></i>
+                <i class="bi bi-star" data-rating="2"></i>
+                <i class="bi bi-star" data-rating="3"></i>
+                <i class="bi bi-star" data-rating="4"></i>
+                <i class="bi bi-star" data-rating="5"></i>
+              </div>
+              <p class="small">Ubicación: Terminal Central<br>Traslados incluidos</p>
+              <button class="btn btn-secondary btn-sm flip-btn">Volver</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="bg-dark text-white p-5 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <h4>Suscríbete a nuestras ofertas</h4>
+          <form id="contactForm">
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo electrónico</label>
+              <input type="email" class="form-control" id="email" placeholder="tu@email.com" required>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Suscribirse <span id="spinner" class="spinner-border spinner-border-sm d-none"></span>
+            </button>
+          </form>
+          <div class="mt-4">
+            <h5>Síguenos</h5>
+            <div class="social-sprite-container"></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3641.8767931351187!2d-65.29528998497672!3d-24.184347789314052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f44bb5f257d%3A0x8e8ebcb15c0e1834!2sUniversidad%20Nacional%20de%20Jujuy!5e0!3m2!1ses!2sar!4v1683935293844!5m2!1ses!2sar" width="100%" height="250" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="phishingModal" tabindex="-1" aria-labelledby="phishingModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-danger text-white">
+          <h5 class="modal-title" id="phishingModalLabel"><i class="bi bi-exclamation-triangle-fill"></i> Alerta de Seguridad</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="fw-bold">Nunca compartas tus datos bancarios.</p>
+          <p>En MundoTurismo jamás te pediremos tus contraseñas o números de tarjeta por correo electrónico o redes sociales.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">He comprendido</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/jquery/jquery-3.7.1.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      // Efecto Flip con jQuery toggleClass
+      $('.flip-btn').click(function(e) {
+        e.preventDefault();
+        // Busca la tarjeta padre más cercana y le alterna la clase que la hace girar
+        $(this).closest('.flip-card').toggleClass('is-flipped');
+      });
+
+      // Sistema de Rating con Estrellas
+      $('.star-rating i').click(function() {
+        var rating = $(this).data('rating');
+        var parent = $(this).parent();
+        
+        // 1. Resetear todas las estrellas de este contenedor a vacías
+        parent.find('i').removeClass('active bi-star-fill').addClass('bi-star');
+        
+        // 2. Llenar las estrellas hasta el número seleccionado usando un bucle .each de jQuery
+        parent.find('i').each(function() {
+          if ($(this).data('rating') <= rating) {
+            $(this).removeClass('bi-star').addClass('active bi-star-fill');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

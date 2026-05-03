@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/style/style-clases.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <title>Contacto - MundoTurismo</title>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><i class="bi bi-globe-americas"></i> MundoTurismo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="megaMenu" role="button" data-bs-toggle="dropdown">
+              Explorar
+            </a>
+            <ul class="dropdown-menu mega-menu p-3">
+              <li><a class="dropdown-item" href="destinos.html">Destinos</a></li>
+              <li><a class="dropdown-item" href="agencias.html">Agencias</a></li>
+              <li><a class="dropdown-item" href="precios.html">Precios</a></li>
+              <li><a class="dropdown-item" href="blog.html">Blog de Viajes</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="contacto.html">Contacto</a></li>
+            </ul>
+          </li>
+        </ul>
+        <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#phishingModal">
+          <i class="bi bi-shield-lock"></i> Simulación de phishing
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container my-5">
+    <div class="row align-items-center justify-content-center">
+      
+      <div class="col-md-5 mb-4 text-center text-md-start">
+        <h2>¿Tienes dudas? ¡Escríbenos!</h2>
+        <p class="lead text-muted">Nuestros asesores de viaje están listos para ayudarte a planear tus próximas vacaciones.</p>
+        <ul class="list-unstyled mt-4">
+          <li class="mb-3"><i class="bi bi-geo-alt-fill text-primary fs-4 me-2"></i> Av. Siempre Viva 123, Jujuy</li>
+          <li class="mb-3"><i class="bi bi-telephone-fill text-primary fs-4 me-2"></i> +54 388 123 4567</li>
+          <li class="mb-3"><i class="bi bi-envelope-fill text-primary fs-4 me-2"></i> info@mundoturismo.com</li>
+        </ul>
+      </div>
+
+      <div class="col-md-7">
+        <div class="card shadow-lg border-0 p-4">
+          <form id="contactoPrincipalForm">
+            
+            <div class="mb-3">
+              <label for="nombreUsuario" class="form-label fw-bold">Nombre Completo</label>
+              <input type="text" class="form-control" id="nombreUsuario" placeholder="Ej: Juan Pérez" required>
+              <div class="invalid-feedback">Por favor, ingresa al menos 3 caracteres.</div>
+              <div class="valid-feedback">¡Nombre válido!</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="emailUsuario" class="form-label fw-bold">Correo Electrónico</label>
+              <input type="email" class="form-control" id="emailUsuario" placeholder="tu@email.com" required>
+              <div class="invalid-feedback">Por favor, ingresa un correo válido (debe contener '@' y '.').</div>
+              <div class="valid-feedback">¡Correo válido!</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="mensajeUsuario" class="form-label fw-bold">Tu Mensaje</label>
+              <textarea class="form-control" id="mensajeUsuario" rows="4" placeholder="¿En qué destino estás interesado?" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 fs-5" id="btnEnviar">
+              Enviar Mensaje
+              <span id="submitSpinner" class="spinner-border spinner-border-sm d-none ms-2" role="status" aria-hidden="true"></span>
+            </button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="bg-dark text-white p-5 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <h4>Suscríbete a nuestras ofertas</h4>
+          <form id="contactForm">
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo electrónico</label>
+              <input type="email" class="form-control" id="email" placeholder="tu@email.com" required>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Suscribirse <span id="spinner" class="spinner-border spinner-border-sm d-none"></span>
+            </button>
+          </form>
+          <div class="mt-4">
+            <h5>Síguenos</h5>
+            <div class="social-sprite-container"></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3641.8767931351187!2d-65.29528998497672!3d-24.184347789314052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f44bb5f257d%3A0x8e8ebcb15c0e1834!2sUniversidad%20Nacional%20de%20Jujuy!5e0!3m2!1ses!2sar!4v1683935293844!5m2!1ses!2sar" width="100%" height="250" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="phishingModal" tabindex="-1" aria-labelledby="phishingModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-danger text-white">
+          <h5 class="modal-title" id="phishingModalLabel"><i class="bi bi-exclamation-triangle-fill"></i> Alerta de Seguridad</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="fw-bold">Nunca compartas tus datos bancarios.</p>
+          <p>En MundoTurismo jamás te pediremos tus contraseñas o números de tarjeta por correo electrónico o redes sociales.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">He comprendido</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="confirmacionModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center p-4">
+        <div class="modal-body">
+          <i class="bi bi-check-circle-fill text-success" style="font-size: 4rem;"></i>
+          <h3 class="mt-3">¡Mensaje Enviado!</h3>
+          <p class="lead">Gracias por contactarnos. Un asesor se comunicará contigo a la brevedad.</p>
+          <button type="button" class="btn btn-success mt-3" data-bs-dismiss="modal">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/jquery/jquery-3.7.1.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      
+      // 1. Validación en tiempo real del Nombre
+      $('#nombreUsuario').on('input', function() {
+        var valor = $(this).val();
+        if (valor.length >= 3) {
+          $(this).removeClass('is-invalid').addClass('is-valid');
+        } else {
+          $(this).removeClass('is-valid').addClass('is-invalid');
+        }
+      });
+
+      // 2. Validación en tiempo real del Correo
+      $('#emailUsuario').on('input', function() {
+        var valor = $(this).val();
+        // Comprobación simple de formato correo
+        if (valor.includes('@') && valor.includes('.')) {
+          $(this).removeClass('is-invalid').addClass('is-valid');
+        } else {
+          $(this).removeClass('is-valid').addClass('is-invalid');
+        }
+      });
+
+      // 3. Simulación de Envío con Spinner y Modal
+      $('#contactoPrincipalForm').submit(function(e) {
+        e.preventDefault(); // Evita que la página recargue
+        
+        // Mostrar el spinner de carga
+        $('#submitSpinner').removeClass('d-none');
+        $('#btnEnviar').prop('disabled', true); // Deshabilita el botón
+
+        // Simulamos un retraso de red de 2 segundos (2000 ms)
+        setTimeout(function() {
+          // Ocultar spinner y rehabilitar botón
+          $('#submitSpinner').addClass('d-none');
+          $('#btnEnviar').prop('disabled', false);
+          
+          // Mostrar el Modal de Confirmación
+          var modalExito = new bootstrap.Modal(document.getElementById('confirmacionModal'));
+          modalExito.show();
+
+          // Limpiar el formulario y quitar las clases de validación
+          $('#contactoPrincipalForm')[0].reset();
+          $('.is-valid, .is-invalid').removeClass('is-valid is-invalid');
+          
+        }, 2000);
+      });
+
+    });
+  </script>
+</body>
+</html>

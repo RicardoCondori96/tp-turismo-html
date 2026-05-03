@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="assets/style/style-precios.css">
+  <title>Precios - MundoTurismo</title>
+  <style>
+    /* Refuerzo visual para el Hover Dinámico (Requisito del TP) */
+    .table-hover tbody tr:hover {
+      background-color: #f1f8ff !important;
+      transition: background-color 0.3s ease;
+    }
+    .precio-destacado {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #0d6efd;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><i class="bi bi-globe-americas"></i> MundoTurismo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="megaMenu" role="button" data-bs-toggle="dropdown">
+              Explorar
+            </a>
+            <ul class="dropdown-menu mega-menu p-3">
+              <li><a class="dropdown-item" href="destinos.html">Destinos</a></li>
+              <li><a class="dropdown-item" href="agencias.html">Agencias</a></li>
+              <li><a class="dropdown-item" href="precios.html">Precios</a></li>
+              <li><a class="dropdown-item" href="blog.html">Blog de Viajes</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="contacto.html">Contacto</a></li>
+            </ul>
+          </li>
+        </ul>
+        <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#phishingModal">
+          <i class="bi bi-shield-lock"></i> Simulación de phishing
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-5">
+    <h2 class="text-center mb-4">Comparador de Paquetes</h2>
+    <p class="text-center text-muted mb-4">Encuentra el plan perfecto para tus próximas vacaciones.</p>
+
+    <div class="d-flex justify-content-center mb-4">
+      <div class="form-check form-switch fs-5">
+        <input class="form-check-input" type="checkbox" id="toggleTemporada" />
+        <label class="form-check-label" for="toggleTemporada">Ver precios de <strong>Temporada Alta</strong></label>
+      </div>
+    </div>
+
+    <div class="table-responsive shadow-sm rounded">
+      <table class="table table-hover table-bordered text-center align-middle bg-white" id="tablaPrecios">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">Características</th>
+            <th scope="col" data-bs-toggle="tooltip" data-bs-placement="top" title="Ideal para escapadas cortas y económicas">Económico</th>
+            <th scope="col" data-bs-toggle="tooltip" data-bs-placement="top" title="Para los que buscan excursiones y guiado continuo">Aventura</th>
+            <th scope="col" data-bs-toggle="tooltip" data-bs-placement="top" title="Todo resuelto, ideal para relajarse al máximo sin preocupaciones">All-Inclusive</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" class="text-start ps-3">Precio Base (por persona)</th>
+            <td class="precio-destacado" data-baja="350" data-alta="500">$350 USD</td>
+            <td class="precio-destacado" data-baja="650" data-alta="850">$650 USD</td>
+            <td class="precio-destacado" data-baja="1200" data-alta="1500">$1200 USD</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start ps-3">Vuelos Redondos</th>
+            <td><i class="bi bi-check-circle-fill text-success"></i></td>
+            <td><i class="bi bi-check-circle-fill text-success"></i></td>
+            <td><i class="bi bi-check-circle-fill text-success"></i></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start ps-3">Hospedaje</th>
+            <td>Hostel / 2 Estrellas</td>
+            <td>Hotel 3 Estrellas</td>
+            <td>Resort 5 Estrellas</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start ps-3">Comidas Incluidas</th>
+            <td>Solo Desayuno</td>
+            <td>Media Pensión</td>
+            <td>Comidas y Bebidas Ilimitadas</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start ps-3">Excursiones Guiadas</th>
+            <td><i class="bi bi-x-circle-fill text-danger"></i></td>
+            <td>2 Excursiones</td>
+            <td>Excursiones Diarias</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start ps-3">Asistencia al Viajero</th>
+            <td><i class="bi bi-x-circle-fill text-danger"></i></td>
+            <td><i class="bi bi-check-circle-fill text-success"></i></td>
+            <td><i class="bi bi-check-circle-fill text-success"></i> (Premium)</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start ps-3"></th>
+            <td><button class="btn btn-outline-primary btn-sm">Reservar</button></td>
+            <td><button class="btn btn-primary btn-sm">Reservar</button></td>
+            <td><button class="btn btn-dark btn-sm">Reservar VIP</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-white p-5 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <h4>Suscríbete a nuestras ofertas</h4>
+          <form id="contactFormFooter">
+            <div class="mb-3">
+              <label for="emailFooter" class="form-label">Correo electrónico</label>
+              <input type="email" class="form-control" id="emailFooter" placeholder="tu@email.com" required>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Suscribirse <span class="spinner-border spinner-border-sm d-none"></span>
+            </button>
+          </form>
+          <div class="mt-4">
+            <h5>Síguenos</h5>
+            <div class="social-sprite-container"></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3641.8767931351187!2d-65.29528998497672!3d-24.184347789314052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f44bb5f257d%3A0x8e8ebcb15c0e1834!2sUniversidad%20Nacional%20de%20Jujuy!5e0!3m2!1ses!2sar!4v1683935293844!5m2!1ses!2sar" width="100%" height="250" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="phishingModal" tabindex="-1" aria-labelledby="phishingModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-danger text-white">
+          <h5 class="modal-title" id="phishingModalLabel"><i class="bi bi-exclamation-triangle-fill"></i> Alerta de Seguridad</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="fw-bold">Nunca compartas tus datos bancarios.</p>
+          <p>En MundoTurismo jamás te pediremos tus contraseñas o números de tarjeta por correo electrónico o redes sociales.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">He comprendido</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/jquery/jquery-3.7.1.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      // 1. Inicializar Tooltips de Bootstrap (Requisito del TP)
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+      })
+
+      // 2. Lógica para el Toggle de Temporada Baja / Alta
+      $('#toggleTemporada').change(function() {
+        var esTemporadaAlta = $(this).is(':checked');
+        
+        $('.precio-destacado').each(function() {
+          if(esTemporadaAlta) {
+            // Animación suave de desvanecimiento con jQuery
+            $(this).fadeOut(200, function() {
+              $(this).text('$' + $(this).data('alta') + ' USD').fadeIn(200);
+            });
+          } else {
+            $(this).fadeOut(200, function() {
+              $(this).text('$' + $(this).data('baja') + ' USD').fadeIn(200);
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/style/style-clases.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <title>Destinos - MundoTurismo</title>
+  <style>
+    /* Estilos rápidos */
+    .zoom-card {
+      overflow: hidden;
+      border-radius: 8px;
+    }
+    .zoom-card img {
+      transition: transform 0.4s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><i class="bi bi-globe-americas"></i> MundoTurismo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="megaMenu" role="button" data-bs-toggle="dropdown">
+              Explorar
+            </a>
+            <ul class="dropdown-menu mega-menu p-3">
+              <li><a class="dropdown-item" href="destinos.html">Destinos</a></li>
+              <li><a class="dropdown-item" href="agencias.html">Agencias</a></li>
+              <li><a class="dropdown-item" href="precios.html">Precios</a></li>
+              <li><a class="dropdown-item" href="blog.html">Blog de Viajes</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="contacto.html">Contacto</a></li>
+            </ul>
+          </li>
+        </ul>
+        <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#phishingModal">
+          <i class="bi bi-shield-lock"></i> Simulación de phishing
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container my-4">
+    <h2 class="text-center mb-4">Descubre nuestros Destinos</h2>
+    <div class="text-center mb-4">
+      <button class="btn btn-outline-primary filter-btn m-1" data-filter="all">Todos</button>
+      <button class="btn btn-outline-primary filter-btn m-1" data-filter="playa">Sol y Playa</button>
+      <button class="btn btn-outline-primary filter-btn m-1" data-filter="cultural">Cultural / Histórico</button>
+      <button class="btn btn-outline-primary filter-btn m-1" data-filter="naturaleza">Naturaleza</button>
+    </div>
+  </div>
+
+  <div class="container my-4">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="destinations-grid">
+      
+      <div class="col destino-item naturaleza">
+        <div class="card h-100 border-0 shadow-sm zoom-card">
+          <img src="assets/img/destino11.jpg" class="card-img-top img-fluid" alt="Cerro de los 7 Colores en Purmamarca, Jujuy" style="height: 250px; object-fit: cover;">
+          <div class="card-body text-center">
+            <h5 class="card-title">Purmamarca, Jujuy</h5>
+            <p class="text-muted">Desconecta en los paisajes del norte.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col destino-item playa">
+        <div class="card h-100 border-0 shadow-sm zoom-card">
+          <img src="assets/img/destino22.jpg" class="card-img-top img-fluid" alt="Playa de aguas turquesas en Cancún, México" style="height: 250px; object-fit: cover;">
+          <div class="card-body text-center">
+            <h5 class="card-title">Cancún, México</h5>
+            <p class="text-muted">Relájate en el paraíso caribeño.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col destino-item cultural">
+        <div class="card h-100 border-0 shadow-sm zoom-card">
+          <img src="assets/img/destino33.jpg" class="card-img-top img-fluid" alt="El Coliseo en Roma, Italia" style="height: 250px; object-fit: cover;">
+          <div class="card-body text-center">
+            <h5 class="card-title">Roma, Italia</h5>
+            <p class="text-muted">Recorre el corazón del antiguo Imperio Romano.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Paquetes Disponibles</h2>
+    <div class="table-responsive">
+      <table class="table table-striped table-hover align-middle">
+        <thead class="table-dark">
+          <tr>
+            <th>Destino</th>
+            <th>Duración</th>
+            <th>Categoría</th>
+            <th>Precio Final</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="fw-bold">Roma, Italia</td>
+            <td>10 Días / 9 Noches</td>
+            <td>Cultural</td>
+            <td>$1,850 USD</td>
+            <td><button class="btn btn-sm btn-success">Reservar</button></td>
+          </tr>
+          <tr>
+            <td class="fw-bold">Purmamarca, Jujuy</td>
+            <td>5 Días / 4 Noches</td>
+            <td>Naturaleza</td>
+            <td>$350 USD</td>
+            <td><button class="btn btn-sm btn-success">Reservar</button></td>
+          </tr>
+          <tr>
+            <td class="fw-bold">Cancún, México</td>
+            <td>7 Días / 6 Noches</td>
+            <td>Playa</td>
+            <td>$980 USD</td>
+            <td><button class="btn btn-sm btn-success">Reservar</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-white p-5 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <h4>Suscríbete a nuestras ofertas</h4>
+          <form id="contactForm">
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo electrónico</label>
+              <input type="email" class="form-control" id="email" placeholder="tu@email.com" required>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Suscribirse <span id="spinner" class="spinner-border spinner-border-sm d-none"></span>
+            </button>
+          </form>
+          <div class="mt-4">
+            <h5>Síguenos</h5>
+            <div class="social-sprite-container"></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3641.8767931351187!2d-65.29528998497672!3d-24.184347789314052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f44bb5f257d%3A0x8e8ebcb15c0e1834!2sUniversidad%20Nacional%20de%20Jujuy!5e0!3m2!1ses!2sar!4v1683935293844!5m2!1ses!2sar" width="100%" height="250" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="phishingModal" tabindex="-1" aria-labelledby="phishingModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-danger text-white">
+          <h5 class="modal-title" id="phishingModalLabel"><i class="bi bi-exclamation-triangle-fill"></i> Alerta de Seguridad</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="fw-bold">Nunca compartas tus datos bancarios.</p>
+          <p>En MundoTurismo jamás te pediremos tus contraseñas o números de tarjeta por correo electrónico o redes sociales.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">He comprendido</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/jquery/jquery-3.7.1.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      // Filtros Dinámicos con .filter(), .hide(), .show()
+      $('.filter-btn').click(function() {
+        var category = $(this).attr('data-filter');
+        
+        // Estilos para los botones
+        $('.filter-btn').removeClass('active');
+        $(this).addClass('active');
+
+        if (category == 'all') {
+          $('.destino-item').show(500);
+        } else {
+          $('.destino-item').hide(500);
+          $('.destino-item').filter('.' + category).show(500);
+        }
+      });
+
+      // Efecto Zoom con jQuery + CSS
+      $('.zoom-card').hover(
+        function() {
+          $(this).find('img').css('transform', 'scale(1.1)');
+        },
+        function() {
+          $(this).find('img').css('transform', 'scale(1)');
+        }
+      );
+    });
+  </script>
+</body>
+</html>
